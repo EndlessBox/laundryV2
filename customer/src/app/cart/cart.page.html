@@ -1,0 +1,123 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button text="" name="arrow-back-outline"></ion-back-button>
+        </ion-buttons>
+        <ion-title>
+            {{"Review_Order" | translate}}
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="bg_color" fullscreen>
+    <ion-card class="item_info">
+        <h2>{{'Your_cloth' | translate}}</h2>
+        <div class="item_list">
+            <div class="item">
+                <ion-row>
+                    <ion-col size="6">
+                        <h3>Shirts (Man)</h3>
+                        <h4>Wash only</h4>
+                    </ion-col>
+
+                    <ion-col size="3">
+                        <h5>
+                            <span>-</span>
+                            <strong>1</strong>
+                            <span class="add">+</span>
+                        </h5>
+                    </ion-col>
+                    <ion-col size="3">
+                        <h3 class="d-flex"><span class="end">x $20</span></h3>
+                    </ion-col>
+                </ion-row>
+            </div>
+
+            <div class="item">
+                <ion-row>
+                    <ion-col size="6">
+                        <h3>Trouser (Man)</h3>
+                        <h4>Wash & Iron</h4>
+                    </ion-col>
+
+                    <ion-col size="3">
+                        <h5>
+                            <span>-</span>
+                            <strong>1</strong>
+                            <span class="add">+</span>
+                        </h5>
+                    </ion-col>
+                    <ion-col size="3">
+                        <h3 class="d-flex"><span class="end">x $25</span></h3>
+                    </ion-col>
+                </ion-row>
+            </div>
+
+            <div class="item">
+                <ion-row>
+                    <ion-col size="6">
+                        <h3>Jeans (Man)</h3>
+                        <h4>Dry Clean</h4>
+                    </ion-col>
+
+                    <ion-col size="3">
+                        <h5>
+                            <span>-</span>
+                            <strong>1</strong>
+                            <span class="add">+</span>
+                        </h5>
+                    </ion-col>
+                    <ion-col size="3">
+                        <h3 class="d-flex"><span class="end">x $10</span></h3>
+                    </ion-col>
+                </ion-row>
+            </div>
+
+
+            <div class="item">
+                <ion-row>
+                    <ion-col size="6">
+                        <h3>T-shirt (Woman)</h3>
+                        <h4>Wash only</h4>
+                    </ion-col>
+
+                    <ion-col size="3">
+                        <h5>
+                            <span>-</span>
+                            <strong>1</strong>
+                            <span class="add">+</span>
+                        </h5>
+                    </ion-col>
+                    <ion-col size="3">
+                        <h3 class="d-flex"><span class="end">x $18</span></h3>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </div>
+    </ion-card>
+</ion-content>
+
+
+<ion-footer class="ion-no-border">
+    <ion-card class="promo-code" (click)="promocode()">
+        <h2 class="d-flex">
+            <ion-icon class="zmdi zmdi-label"></ion-icon>{{'Have_Promocode' | translate}}
+        </h2>
+    </ion-card>
+
+    <ion-card class="payment_info">
+        <h5 class="d-flex">{{'Sub_Total' | translate}} <span class="end ion-text-end">$73</span></h5>
+        <h5 class="d-flex">{{'service_fee' | translate}} <span class="end ion-text-end">$5</span></h5>
+        <h2 class="d-flex ">{{'paid_via' | translate}} Credit Card<span class="end ion-text-end">$78</span></h2>
+    </ion-card>
+
+
+    <div class="btn" (click)="select_time()">
+        <h2 class="d-flex">{{'total' | translate}} $78.00 
+            <span class="end">{{'Next' | translate}}
+                <ion-icon class="zmdi zmdi-chevron-right ion-text-end "></ion-icon>
+            </span>
+        </h2>
+    </div>
+
+</ion-footer>

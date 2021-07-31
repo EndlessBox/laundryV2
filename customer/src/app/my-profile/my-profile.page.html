@@ -1,0 +1,54 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button text="" name="arrow-back-outline"></ion-back-button>
+        </ion-buttons>
+        <ion-title>
+            {{"My_Profile" | translate}}
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-content>
+        <div class="form">
+
+            <div class="img_box center_img">
+                <img src="assets/imgs/face.png" class="crop_img">
+                <!--                <ion-icon class="zmdi zmdi-camera ion-text-center"></ion-icon>-->
+            </div>
+            <ion-list lines="none">
+                <ion-item lines="none">
+
+                    <div class="item_inner d-flex">
+                        <ion-icon class="zmdi zmdi-account ion-text-start"></ion-icon>
+                        <div class="input_box">
+                            <ion-label position="floating">{{'full_name' | translate}}</ion-label>
+                            <ion-input mode="md" type="name" value="Sam Smith" readonly="boolean"></ion-input> 
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item lines="none">
+                    <div class="item_inner d-flex">
+                        <ion-icon class="zmdi zmdi-email ion-text-start"></ion-icon>
+                        <div class="input_box">
+                            <ion-label position="floating">{{'Email_or_Phone_Number' | translate}}</ion-label>
+                            <ion-input mode="md" type="email" value="samsmith@mail.com" readonly="boolean"></ion-input>
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item lines="none">
+                    <div class="item_inner d-flex">
+                        <ion-icon class="zmdi zmdi-smartphone-iphone ion-text-start"></ion-icon>
+                        <div class="input_box">
+                            <ion-label position="floating">{{'Phone_Number' | translate}}</ion-label>
+                            <ion-input mode="md" type="text" value="+1 987 654 3210" readonly="boolean"></ion-input>
+                        </div>
+                    </div>
+                </ion-item>
+            </ion-list>
+        </div>
+    </ion-content>
+</ion-content>

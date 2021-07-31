@@ -1,0 +1,69 @@
+<ion-header>
+    <ion-toolbar>
+        <!--
+        <ion-buttons slot="start" mode="md">
+            <ion-back-button text="" name="arrow-back-outline"></ion-back-button>
+        </ion-buttons>
+-->
+        <ion-title>{{'Sign_in_now' | translate}} QuickWash</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="form">
+        <ion-list lines="none">
+            <ion-item lines="none">
+                <div class="item_inner d-flex">
+                    <ion-icon class="zmdi zmdi-email ion-text-start"></ion-icon>
+                    <div class="input_box">
+                        <ion-label position="floating">{{'Email_or_Phone_Number' | translate}}</ion-label>
+                        <ion-input mode="md" type="email"></ion-input>
+                    </div>
+                </div>
+            </ion-item>
+
+            <ion-item lines="none">
+                <!--                    <ion-label position="fixed">{{'mobile_number' | translate}}</ion-label>-->
+                <div class="item_inner d-flex">
+                    <ion-icon class="zmdi zmdi-lock ion-text-start"></ion-icon>
+                    <div class="input_box d-flex">
+                        <div style="width: 100%">
+                            <ion-label position="floating">{{'password' | translate}}</ion-label>
+                            <ion-input mode="md" type="password"></ion-input>
+                        </div>
+                        <h5 class="end" (click)="forgot_password()">{{'Forgot' | translate}}</h5>
+                    </div>
+                </div>
+            </ion-item>
+
+        </ion-list>
+        <ion-button size="large" shape="block" class="btn" (click)="tabs()">{{'Sign_in' | translate}}</ion-button>
+
+        <div class="quick_signin">
+            <h4 class="ion-text-center">{{'or_continue_with' | translate}}</h4>
+            <ion-row>
+                <ion-col size="6">
+                    <ion-button size="large" shape="block" class="btn facebook" (click)="tabs()">
+                        <img slot="start" src="assets/imgs/fb.png">
+                        {{'facebook' | translate}}
+                    </ion-button>
+                </ion-col>
+
+                <ion-col size="6">
+                    <ion-button fill="outline" size="large" shape="block" class="btn google" (click)="tabs()">
+                        <img slot="start" src="assets/imgs/google.png">
+                        {{'google' | translate}}
+                    </ion-button>
+                </ion-col>
+            </ion-row>
+        </div>
+    </div>
+</ion-content>
+
+<ion-footer class="ion-no-border">
+    <h4 class="ion-text-center">{{'Oh_Not_Registered_yet' | translate}}</h4>
+
+    <ion-button fill="outline" size="large" shape="block" class="btn" (click)="resiter_now()">
+        {{'Register_Now' | translate}}
+    </ion-button>
+</ion-footer>

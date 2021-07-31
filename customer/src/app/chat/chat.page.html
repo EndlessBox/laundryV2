@@ -1,0 +1,38 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button text="" name="arrow-back-outline"></ion-back-button>
+        </ion-buttons>
+        <ion-title>
+            {{"customer_care" | translate}}
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="bg_color" fullscreen>
+    <div class="chat_container d-flex">
+        <div class="chat_box d-flex received">
+            <div class="chat">
+
+                <h2>Hello. How can we help you today?</h2>
+                <p>Now</p>
+            </div>
+        </div>
+        <div class="chat_box d-flex send">
+            <div class="chat">
+                <h2>How to book a pickup from <br> my location?</h2>
+                <p>Now</p>
+            </div>
+        </div>
+    </div>
+</ion-content>
+<ion-footer class="ion-no-border">
+    <div class="form d-flex">
+        <ion-item lines="none">
+            <ion-input mode="md" type="email" placeholder="{{'enter_your_message' | translate}}"></ion-input>
+        </ion-item>
+        <div class="send_btn end">
+            <ion-icon class="zmdi zmdi-mail-send ion-text-start"></ion-icon>
+        </div>
+    </div>
+</ion-footer>

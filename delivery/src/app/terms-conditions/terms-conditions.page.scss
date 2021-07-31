@@ -1,0 +1,38 @@
+ion-header {
+    ion-toolbar ion-title {
+        position: relative !important;
+        text-align: justify;
+        font-weight: 600;
+    }
+}
+
+.container {
+    padding: 16px;
+
+    .logo {
+        margin: auto;
+        display: block;
+        margin-top: 20px;
+        margin-bottom: 40px;
+        max-width: 280px;
+    }
+
+    h2 {
+        color: var(--text-light2);
+        margin: 0;
+        font-size: 1rem;
+        font-weight: 400;
+        padding-bottom: 12px;
+        padding-top: 12px;
+
+    }
+
+    p {
+        color: var(--text-black);
+        margin: 0;
+        font-size: .95rem;
+        padding-bottom: 20px;
+        font-weight: 400;
+        line-height: 22px;
+    }
+}

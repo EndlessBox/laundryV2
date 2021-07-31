@@ -1,0 +1,80 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button text="" icon="arrow-back-outline"></ion-back-button>
+        </ion-buttons>
+        <ion-title>
+            {{"register_nw" | translate}}
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="form">
+        <ion-list lines="none">
+            <ion-item lines="none">
+                <div class="item_inner d-flex">
+                    <ion-icon name="md-mail" slot="start" class="ion-text-start zmdi zmdi-account"></ion-icon>
+                    <div class="input_box">
+                        <ion-label mode="md" position="floating">{{"full_name" | translate}}</ion-label>
+                        <ion-input mode="md" type="name"></ion-input>
+                    </div>
+                </div>
+            </ion-item>
+
+            <!--
+            <ion-item lines="none">
+                <div class="item_inner d-flex">
+                    <ion-icon mode="md" name="md-globe" slot="start" class="ion-text-start zmdi zmdi-globe"></ion-icon>
+                    <div class="input_box">
+                        <ion-label mode="md" position="floating">{{"select_country" | translate}}</ion-label>
+                        <ion-select mode="md" okText="{{'ok' | translate}}" cancelText="{{'cancel' | translate}}">
+                            <ion-select-option value="1">Brazil</ion-select-option>
+                            <ion-select-option value="2">India</ion-select-option>
+                            <ion-select-option value="3">Ireland</ion-select-option>
+                            <ion-select-option value="4">Japan</ion-select-option>
+                            <ion-select-option value="5">Kenya</ion-select-option>
+                            <ion-select-option value="6">Latvia</ion-select-option>
+                            <ion-select-option value="7">Martinique</ion-select-option>
+                            <ion-select-option value="8">Mexico</ion-select-option>
+                            <ion-select-option value="9">Monaco</ion-select-option>
+                            <ion-select-option value="10">Nepal</ion-select-option>
+                        </ion-select>
+                    </div>
+                </div>
+            </ion-item>
+-->
+
+            <ion-item lines="none">
+                <div class="item_inner d-flex">
+                    <ion-icon name="md-mail" slot="start" class="ion-text-start zmdi zmdi-email"></ion-icon>
+                    <div class="input_box">
+                        <ion-label mode="md" position="floating">{{"email" | translate}}</ion-label>
+                        <ion-input mode="md" type="email"></ion-input>
+                    </div>
+                </div>
+            </ion-item>
+
+            <ion-item lines="none">
+                <div class="item_inner d-flex">
+                    <ion-icon name="md-mail" slot="start" class="ion-text-start zmdi zmdi-smartphone"></ion-icon>
+                    <div class="input_box">
+                        <ion-label mode="md" position="floating">{{"phone" | translate}}</ion-label>
+                        <ion-input mode="md" type="numbar"></ion-input>
+                    </div>
+                </div>
+            </ion-item>
+
+            <ion-item lines="none">
+                <div class="item_inner d-flex">
+                    <ion-icon name="md-mail" slot="start" class="ion-text-start zmdi zmdi-lock"></ion-icon>
+                    <div class="input_box">
+                        <ion-label mode="md" position="floating">{{"c_password" | translate}}</ion-label>
+                        <ion-input mode="md" type="password"></ion-input>
+                    </div>
+                </div>
+            </ion-item>
+        </ion-list>
+        <ion-button size="large" expand="block" class="btn" (click)="tabs()">{{'register_nw' | translate}}</ion-button>
+    </div>
+</ion-content>

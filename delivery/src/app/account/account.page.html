@@ -1,0 +1,49 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>{{"more" | translate}}</ion-title>
+    </ion-toolbar>
+
+    <div class="profile_info">
+        <h2>George Smith</h2>
+        <p>+1 987 654 3210</p>
+    </div>
+    <div class="buy_this_app" *ngIf="config.showBuyPromt" (click)="buyappalert()">
+        <h2>
+            <!--            <ion-icon class="zmdi zmdi-shopping-cart"></ion-icon>-->
+            {{"buy_this_app" | translate}}
+        </h2>
+    </div>
+</ion-header>
+
+<ion-content class="bg_color">
+    <ion-list lines="none">
+        <ion-item (click)="contact()">
+            <div class="item_inner d-flex">
+                <ion-icon class="zmdi zmdi-email ion-text-start"></ion-icon>
+                <h2>{{"contact_us" | translate}}</h2>
+            </div>
+        </ion-item>
+        <ion-item (click)="tnc()">
+            <div class="item_inner d-flex">
+                <ion-icon class="zmdi zmdi-assignment-alert ion-text-start"></ion-icon>
+                <h2>{{"tnc" | translate}}</h2>
+            </div>
+        </ion-item>
+        <ion-item (click)="chooseLanguage()">
+            <div class="item_inner d-flex">
+                <ion-icon class="zmdi zmdi-globe ion-text-start"></ion-icon>
+                <h2>{{"change_language" | translate}}</h2>
+            </div>
+        </ion-item>
+        <ion-item (click)="logout()">
+            <div class="item_inner d-flex">
+                <ion-icon class="zmdi zmdi-open-in-new ion-text-start"></ion-icon>
+                <h2>{{"logout" | translate}}</h2>
+            </div>
+        </ion-item>
+    </ion-list>
+    <div class="logo ion-text-center">
+        <img src="assets/imgs/logo_2.png">
+    </div>
+
+</ion-content>

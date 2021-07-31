@@ -1,0 +1,669 @@
+<ion-header>
+	<ion-toolbar>
+		<ion-buttons slot="start">
+			<ion-menu-button></ion-menu-button>
+		</ion-buttons>
+		<ion-title>{{'products' | translate}}</ion-title>
+	</ion-toolbar>
+	<ion-select mode="ios" interface="popover" [(ngModel)]="categories">
+		<ion-select-option value="all_categories">All Categories</ion-select-option>
+		<ion-select-option value="n64">Kids Categories</ion-select-option>
+	</ion-select>
+</ion-header>
+
+<ion-content class="bg_color" fullscreen>
+	<ion-list lines="none">
+		<ion-item (click)="additems()">
+			<div class="item_inner d-flex">
+				<div class="img_box center_img">
+					<img src="assets/imgs/item_img_1.png" class="crop_img">
+				</div>
+				<div class="text_box">
+					<h2 class="d-flex">Fresh Onion - Medium <span class="end ion-text-end">UDI7787</span></h2>
+					<h3 class="d-flex">Red 1 kg <span class="end ion-text-end">$ 1.50</span></h3>
+					<p class="d-flex">Vegetables & Fruits <span class="end ion-text-end in_stock">{{'in_stock' | translate}}</span></p>
+				</div>
+			</div>
+		</ion-item>
+
+		<ion-item (click)="additems()">
+			<div class="item_inner d-flex">
+				<div class="img_box center_img">
+					<img src="assets/imgs/item_img_2.png" class="crop_img">
+				</div>
+				<div class="text_box">
+					<h2 class="d-flex">Cauliflower fresh with <span class="end ion-text-end">UDI7787</span></h2>
+					<h3 class="d-flex">left 1 kg <span class="end ion-text-end">$ 4.50</span></h3>
+					<p class="d-flex">Vegetables & Fruits <span class="end ion-text-end out_of_stock">{{'out_of_stock' | translate}}</span></p>
+				</div>
+			</div>
+		</ion-item>
+
+		<ion-item (click)="additems()">
+			<div class="item_inner d-flex">
+				<div class="img_box center_img">
+					<img src="assets/imgs/item_img_3.png" class="crop_img">
+				</div>
+				<div class="text_box">
+					<h2 class="d-flex">Fresh Garlic - Medium <span class="end ion-text-end">UDI7787</span></h2>
+					<h3 class="d-flex">Red 1 kg <span class="end ion-text-end">$ 3.50</span></h3>
+					<p class="d-flex">Vegetables & Fruits <span class="end ion-text-end in_stock">{{'in_stock' | translate}}</span></p>
+				</div>
+			</div>
+		</ion-item>
+		<ion-item (click)="additems()">
+			<div class="item_inner d-flex">
+				<div class="img_box center_img">
+					<img src="assets/imgs/item_img_1.png" class="crop_img">
+				</div>
+				<div class="text_box">
+					<h2 class="d-flex">Fresh Onion - Medium <span class="end ion-text-end">UDI7787</span></h2>
+					<h3 class="d-flex">Red 1 kg <span class="end ion-text-end">$ 1.50</span></h3>
+					<p class="d-flex">Vegetables & Fruits <span class="end ion-text-end in_stock">{{'in_stock' | translate}}</span></p>
+				</div>
+			</div>
+		</ion-item>
+
+		<ion-item (click)="additems()">
+			<div class="item_inner d-flex">
+				<div class="img_box center_img">
+					<img src="assets/imgs/item_img_2.png" class="crop_img">
+				</div>
+				<div class="text_box">
+					<h2 class="d-flex">Cauliflower fresh with <span class="end ion-text-end">UDI7787</span></h2>
+					<h3 class="d-flex">left 1 kg <span class="end ion-text-end">$ 4.50</span></h3>
+					<p class="d-flex">Vegetables & Fruits <span class="end ion-text-end out_of_stock">{{'out_of_stock' | translate}}</span></p>
+				</div>
+			</div>
+		</ion-item>
+
+		<ion-item (click)="additems()">
+			<div class="item_inner d-flex">
+				<div class="img_box center_img">
+					<img src="assets/imgs/item_img_3.png" class="crop_img">
+				</div>
+				<div class="text_box">
+					<h2 class="d-flex">Fresh Garlic - Medium <span class="end ion-text-end">UDI7787</span></h2>
+					<h3 class="d-flex">Red 1 kg <span class="end ion-text-end">$ 3.50</span></h3>
+					<p class="d-flex">Vegetables & Fruits <span class="end ion-text-end in_stock">{{'in_stock' | translate}}</span></p>
+				</div>
+			</div>
+		</ion-item>
+		<ion-item (click)="additems()">
+			<div class="item_inner d-flex">
+				<div class="img_box center_img">
+					<img src="assets/imgs/item_img_1.png" class="crop_img">
+				</div>
+				<div class="text_box">
+					<h2 class="d-flex">Fresh Onion - Medium <span class="end ion-text-end">UDI7787</span></h2>
+					<h3 class="d-flex">Red 1 kg <span class="end ion-text-end">$ 1.50</span></h3>
+					<p class="d-flex">Vegetables & Fruits <span class="end ion-text-end in_stock">{{'in_stock' | translate}}</span></p>
+				</div>
+			</div>
+		</ion-item>
+
+		<ion-item (click)="additems()">
+			<div class="item_inner d-flex">
+				<div class="img_box center_img">
+					<img src="assets/imgs/item_img_2.png" class="crop_img">
+				</div>
+				<div class="text_box">
+					<h2 class="d-flex">Cauliflower fresh with <span class="end ion-text-end">UDI7787</span></h2>
+					<h3 class="d-flex">left 1 kg <span class="end ion-text-end">$ 4.50</span></h3>
+					<p class="d-flex">Vegetables & Fruits <span class="end ion-text-end out_of_stock">{{'out_of_stock' | translate}}</span></p>
+				</div>
+			</div>
+		</ion-item>
+
+		<ion-item (click)="additems()">
+			<div class="item_inner d-flex">
+				<div class="img_box center_img">
+					<img src="assets/imgs/item_img_3.png" class="crop_img">
+				</div>
+				<div class="text_box">
+					<h2 class="d-flex">Fresh Garlic - Medium <span class="end ion-text-end">UDI7787</span></h2>
+					<h3 class="d-flex">Red 1 kg <span class="end ion-text-end">$ 3.50</span></h3>
+					<p class="d-flex">Vegetables & Fruits <span class="end ion-text-end in_stock">{{'in_stock' | translate}}</span></p>
+				</div>
+			</div>
+		</ion-item>
+		<ion-item (click)="additems()">
+			<div class="item_inner d-flex">
+				<div class="img_box center_img">
+					<img src="assets/imgs/item_img_1.png" class="crop_img">
+				</div>
+				<div class="text_box">
+					<h2 class="d-flex">Fresh Onion - Medium <span class="end ion-text-end">UDI7787</span></h2>
+					<h3 class="d-flex">Red 1 kg <span class="end ion-text-end">$ 1.50</span></h3>
+					<p class="d-flex">Vegetables & Fruits <span class="end ion-text-end in_stock">{{'in_stock' | translate}}</span></p>
+				</div>
+			</div>
+		</ion-item>
+
+		<ion-item (click)="additems()">
+			<div class="item_inner d-flex">
+				<div class="img_box center_img">
+					<img src="assets/imgs/item_img_2.png" class="crop_img">
+				</div>
+				<div class="text_box">
+					<h2 class="d-flex">Cauliflower fresh with <span class="end ion-text-end">UDI7787</span></h2>
+					<h3 class="d-flex">left 1 kg <span class="end ion-text-end">$ 4.50</span></h3>
+					<p class="d-flex">Vegetables & Fruits <span class="end ion-text-end out_of_stock">{{'out_of_stock' | translate}}</span></p>
+				</div>
+			</div>
+		</ion-item>
+
+		<ion-item (click)="additems()">
+			<div class="item_inner d-flex">
+				<div class="img_box center_img">
+					<img src="assets/imgs/item_img_3.png" class="crop_img">
+				</div>
+				<div class="text_box">
+					<h2 class="d-flex">Fresh Garlic - Medium <span class="end ion-text-end">UDI7787</span></h2>
+					<h3 class="d-flex">Red 1 kg <span class="end ion-text-end">$ 3.50</span></h3>
+					<p class="d-flex">Vegetables & Fruits <span class="end ion-text-end in_stock">{{'in_stock' | translate}}</span></p>
+				</div>
+			</div>
+		</ion-item>
+		<ion-item (click)="additems()">
+			<div class="item_inner d-flex">
+				<div class="img_box center_img">
+					<img src="assets/imgs/item_img_1.png" class="crop_img">
+				</div>
+				<div class="text_box">
+					<h2 class="d-flex">Fresh Onion - Medium <span class="end ion-text-end">UDI7787</span></h2>
+					<h3 class="d-flex">Red 1 kg <span class="end ion-text-end">$ 1.50</span></h3>
+					<p class="d-flex">Vegetables & Fruits <span class="end ion-text-end in_stock">{{'in_stock' | translate}}</span></p>
+				</div>
+			</div>
+		</ion-item>
+
+		<ion-item (click)="additems()">
+			<div class="item_inner d-flex">
+				<div class="img_box center_img">
+					<img src="assets/imgs/item_img_2.png" class="crop_img">
+				</div>
+				<div class="text_box">
+					<h2 class="d-flex">Cauliflower fresh with <span class="end ion-text-end">UDI7787</span></h2>
+					<h3 class="d-flex">left 1 kg <span class="end ion-text-end">$ 4.50</span></h3>
+					<p class="d-flex">Vegetables & Fruits <span class="end ion-text-end out_of_stock">{{'out_of_stock' | translate}}</span></p>
+				</div>
+			</div>
+		</ion-item>
+
+		<ion-item (click)="additems()">
+			<div class="item_inner d-flex">
+				<div class="img_box center_img">
+					<img src="assets/imgs/item_img_3.png" class="crop_img">
+				</div>
+				<div class="text_box">
+					<h2 class="d-flex">Fresh Garlic - Medium <span class="end ion-text-end">UDI7787</span></h2>
+					<h3 class="d-flex">Red 1 kg <span class="end ion-text-end">$ 3.50</span></h3>
+					<p class="d-flex">Vegetables & Fruits <span class="end ion-text-end in_stock">{{'in_stock' | translate}}</span></p>
+				</div>
+			</div>
+		</ion-item>
+		<ion-item (click)="additems()">
+			<div class="item_inner d-flex">
+				<div class="img_box center_img">
+					<img src="assets/imgs/item_img_1.png" class="crop_img">
+				</div>
+				<div class="text_box">
+					<h2 class="d-flex">Fresh Onion - Medium <span class="end ion-text-end">UDI7787</span></h2>
+					<h3 class="d-flex">Red 1 kg <span class="end ion-text-end">$ 1.50</span></h3>
+					<p class="d-flex">Vegetables & Fruits <span class="end ion-text-end in_stock">{{'in_stock' | translate}}</span></p>
+				</div>
+			</div>
+		</ion-item>
+
+		<ion-item (click)="additems()">
+			<div class="item_inner d-flex">
+				<div class="img_box center_img">
+					<img src="assets/imgs/item_img_2.png" class="crop_img">
+				</div>
+				<div class="text_box">
+					<h2 class="d-flex">Cauliflower fresh with <span class="end ion-text-end">UDI7787</span></h2>
+					<h3 class="d-flex">left 1 kg <span class="end ion-text-end">$ 4.50</span></h3>
+					<p class="d-flex">Vegetables & Fruits <span class="end ion-text-end out_of_stock">{{'out_of_stock' | translate}}</span></p>
+				</div>
+			</div>
+		</ion-item>
+
+		<ion-item (click)="additems()">
+			<div class="item_inner d-flex">
+				<div class="img_box center_img">
+					<img src="assets/imgs/item_img_3.png" class="crop_img">
+				</div>
+				<div class="text_box">
+					<h2 class="d-flex">Fresh Garlic - Medium <span class="end ion-text-end">UDI7787</span></h2>
+					<h3 class="d-flex">Red 1 kg <span class="end ion-text-end">$ 3.50</span></h3>
+					<p class="d-flex">Vegetables & Fruits <span class="end ion-text-end in_stock">{{'in_stock' | translate}}</span></p>
+				</div>
+			</div>
+		</ion-item>
+		<ion-item (click)="additems()">
+			<div class="item_inner d-flex">
+				<div class="img_box center_img">
+					<img src="assets/imgs/item_img_1.png" class="crop_img">
+				</div>
+				<div class="text_box">
+					<h2 class="d-flex">Fresh Onion - Medium <span class="end ion-text-end">UDI7787</span></h2>
+					<h3 class="d-flex">Red 1 kg <span class="end ion-text-end">$ 1.50</span></h3>
+					<p class="d-flex">Vegetables & Fruits <span class="end ion-text-end in_stock">{{'in_stock' | translate}}</span></p>
+				</div>
+			</div>
+		</ion-item>
+
+		<ion-item (click)="additems()">
+			<div class="item_inner d-flex">
+				<div class="img_box center_img">
+					<img src="assets/imgs/item_img_2.png" class="crop_img">
+				</div>
+				<div class="text_box">
+					<h2 class="d-flex">Cauliflower fresh with <span class="end ion-text-end">UDI7787</span></h2>
+					<h3 class="d-flex">left 1 kg <span class="end ion-text-end">$ 4.50</span></h3>
+					<p class="d-flex">Vegetables & Fruits <span class="end ion-text-end out_of_stock">{{'out_of_stock' | translate}}</span></p>
+				</div>
+			</div>
+		</ion-item>
+
+		<ion-item (click)="additems()">
+			<div class="item_inner d-flex">
+				<div class="img_box center_img">
+					<img src="assets/imgs/item_img_3.png" class="crop_img">
+				</div>
+				<div class="text_box">
+					<h2 class="d-flex">Fresh Garlic - Medium <span class="end ion-text-end">UDI7787</span></h2>
+					<h3 class="d-flex">Red 1 kg <span class="end ion-text-end">$ 3.50</span></h3>
+					<p class="d-flex">Vegetables & Fruits <span class="end ion-text-end in_stock">{{'in_stock' | translate}}</span></p>
+				</div>
+			</div>
+		</ion-item>
+		<ion-item (click)="additems()">
+			<div class="item_inner d-flex">
+				<div class="img_box center_img">
+					<img src="assets/imgs/item_img_1.png" class="crop_img">
+				</div>
+				<div class="text_box">
+					<h2 class="d-flex">Fresh Onion - Medium <span class="end ion-text-end">UDI7787</span></h2>
+					<h3 class="d-flex">Red 1 kg <span class="end ion-text-end">$ 1.50</span></h3>
+					<p class="d-flex">Vegetables & Fruits <span class="end ion-text-end in_stock">{{'in_stock' | translate}}</span></p>
+				</div>
+			</div>
+		</ion-item>
+
+		<ion-item (click)="additems()">
+			<div class="item_inner d-flex">
+				<div class="img_box center_img">
+					<img src="assets/imgs/item_img_2.png" class="crop_img">
+				</div>
+				<div class="text_box">
+					<h2 class="d-flex">Cauliflower fresh with <span class="end ion-text-end">UDI7787</span></h2>
+					<h3 class="d-flex">left 1 kg <span class="end ion-text-end">$ 4.50</span></h3>
+					<p class="d-flex">Vegetables & Fruits <span class="end ion-text-end out_of_stock">{{'out_of_stock' | translate}}</span></p>
+				</div>
+			</div>
+		</ion-item>
+
+		<ion-item (click)="additems()">
+			<div class="item_inner d-flex">
+				<div class="img_box center_img">
+					<img src="assets/imgs/item_img_3.png" class="crop_img">
+				</div>
+				<div class="text_box">
+					<h2 class="d-flex">Fresh Garlic - Medium <span class="end ion-text-end">UDI7787</span></h2>
+					<h3 class="d-flex">Red 1 kg <span class="end ion-text-end">$ 3.50</span></h3>
+					<p class="d-flex">Vegetables & Fruits <span class="end ion-text-end in_stock">{{'in_stock' | translate}}</span></p>
+				</div>
+			</div>
+		</ion-item>
+		<ion-item (click)="additems()">
+			<div class="item_inner d-flex">
+				<div class="img_box center_img">
+					<img src="assets/imgs/item_img_1.png" class="crop_img">
+				</div>
+				<div class="text_box">
+					<h2 class="d-flex">Fresh Onion - Medium <span class="end ion-text-end">UDI7787</span></h2>
+					<h3 class="d-flex">Red 1 kg <span class="end ion-text-end">$ 1.50</span></h3>
+					<p class="d-flex">Vegetables & Fruits <span class="end ion-text-end in_stock">{{'in_stock' | translate}}</span></p>
+				</div>
+			</div>
+		</ion-item>
+
+		<ion-item (click)="additems()">
+			<div class="item_inner d-flex">
+				<div class="img_box center_img">
+					<img src="assets/imgs/item_img_2.png" class="crop_img">
+				</div>
+				<div class="text_box">
+					<h2 class="d-flex">Cauliflower fresh with <span class="end ion-text-end">UDI7787</span></h2>
+					<h3 class="d-flex">left 1 kg <span class="end ion-text-end">$ 4.50</span></h3>
+					<p class="d-flex">Vegetables & Fruits <span class="end ion-text-end out_of_stock">{{'out_of_stock' | translate}}</span></p>
+				</div>
+			</div>
+		</ion-item>
+
+		<ion-item (click)="additems()">
+			<div class="item_inner d-flex">
+				<div class="img_box center_img">
+					<img src="assets/imgs/item_img_3.png" class="crop_img">
+				</div>
+				<div class="text_box">
+					<h2 class="d-flex">Fresh Garlic - Medium <span class="end ion-text-end">UDI7787</span></h2>
+					<h3 class="d-flex">Red 1 kg <span class="end ion-text-end">$ 3.50</span></h3>
+					<p class="d-flex">Vegetables & Fruits <span class="end ion-text-end in_stock">{{'in_stock' | translate}}</span></p>
+				</div>
+			</div>
+		</ion-item>
+		<ion-item (click)="additems()">
+			<div class="item_inner d-flex">
+				<div class="img_box center_img">
+					<img src="assets/imgs/item_img_1.png" class="crop_img">
+				</div>
+				<div class="text_box">
+					<h2 class="d-flex">Fresh Onion - Medium <span class="end ion-text-end">UDI7787</span></h2>
+					<h3 class="d-flex">Red 1 kg <span class="end ion-text-end">$ 1.50</span></h3>
+					<p class="d-flex">Vegetables & Fruits <span class="end ion-text-end in_stock">{{'in_stock' | translate}}</span></p>
+				</div>
+			</div>
+		</ion-item>
+
+		<ion-item (click)="additems()">
+			<div class="item_inner d-flex">
+				<div class="img_box center_img">
+					<img src="assets/imgs/item_img_2.png" class="crop_img">
+				</div>
+				<div class="text_box">
+					<h2 class="d-flex">Cauliflower fresh with <span class="end ion-text-end">UDI7787</span></h2>
+					<h3 class="d-flex">left 1 kg <span class="end ion-text-end">$ 4.50</span></h3>
+					<p class="d-flex">Vegetables & Fruits <span class="end ion-text-end out_of_stock">{{'out_of_stock' | translate}}</span></p>
+				</div>
+			</div>
+		</ion-item>
+
+		<ion-item (click)="additems()">
+			<div class="item_inner d-flex">
+				<div class="img_box center_img">
+					<img src="assets/imgs/item_img_3.png" class="crop_img">
+				</div>
+				<div class="text_box">
+					<h2 class="d-flex">Fresh Garlic - Medium <span class="end ion-text-end">UDI7787</span></h2>
+					<h3 class="d-flex">Red 1 kg <span class="end ion-text-end">$ 3.50</span></h3>
+					<p class="d-flex">Vegetables & Fruits <span class="end ion-text-end in_stock">{{'in_stock' | translate}}</span></p>
+				</div>
+			</div>
+		</ion-item>
+		<ion-item (click)="additems()">
+			<div class="item_inner d-flex">
+				<div class="img_box center_img">
+					<img src="assets/imgs/item_img_1.png" class="crop_img">
+				</div>
+				<div class="text_box">
+					<h2 class="d-flex">Fresh Onion - Medium <span class="end ion-text-end">UDI7787</span></h2>
+					<h3 class="d-flex">Red 1 kg <span class="end ion-text-end">$ 1.50</span></h3>
+					<p class="d-flex">Vegetables & Fruits <span class="end ion-text-end in_stock">{{'in_stock' | translate}}</span></p>
+				</div>
+			</div>
+		</ion-item>
+
+		<ion-item (click)="additems()">
+			<div class="item_inner d-flex">
+				<div class="img_box center_img">
+					<img src="assets/imgs/item_img_2.png" class="crop_img">
+				</div>
+				<div class="text_box">
+					<h2 class="d-flex">Cauliflower fresh with <span class="end ion-text-end">UDI7787</span></h2>
+					<h3 class="d-flex">left 1 kg <span class="end ion-text-end">$ 4.50</span></h3>
+					<p class="d-flex">Vegetables & Fruits <span class="end ion-text-end out_of_stock">{{'out_of_stock' | translate}}</span></p>
+				</div>
+			</div>
+		</ion-item>
+
+		<ion-item (click)="additems()">
+			<div class="item_inner d-flex">
+				<div class="img_box center_img">
+					<img src="assets/imgs/item_img_3.png" class="crop_img">
+				</div>
+				<div class="text_box">
+					<h2 class="d-flex">Fresh Garlic - Medium <span class="end ion-text-end">UDI7787</span></h2>
+					<h3 class="d-flex">Red 1 kg <span class="end ion-text-end">$ 3.50</span></h3>
+					<p class="d-flex">Vegetables & Fruits <span class="end ion-text-end in_stock">{{'in_stock' | translate}}</span></p>
+				</div>
+			</div>
+		</ion-item>
+		<ion-item (click)="additems()">
+			<div class="item_inner d-flex">
+				<div class="img_box center_img">
+					<img src="assets/imgs/item_img_1.png" class="crop_img">
+				</div>
+				<div class="text_box">
+					<h2 class="d-flex">Fresh Onion - Medium <span class="end ion-text-end">UDI7787</span></h2>
+					<h3 class="d-flex">Red 1 kg <span class="end ion-text-end">$ 1.50</span></h3>
+					<p class="d-flex">Vegetables & Fruits <span class="end ion-text-end in_stock">{{'in_stock' | translate}}</span></p>
+				</div>
+			</div>
+		</ion-item>
+
+		<ion-item (click)="additems()">
+			<div class="item_inner d-flex">
+				<div class="img_box center_img">
+					<img src="assets/imgs/item_img_2.png" class="crop_img">
+				</div>
+				<div class="text_box">
+					<h2 class="d-flex">Cauliflower fresh with <span class="end ion-text-end">UDI7787</span></h2>
+					<h3 class="d-flex">left 1 kg <span class="end ion-text-end">$ 4.50</span></h3>
+					<p class="d-flex">Vegetables & Fruits <span class="end ion-text-end out_of_stock">{{'out_of_stock' | translate}}</span></p>
+				</div>
+			</div>
+		</ion-item>
+
+		<ion-item (click)="additems()">
+			<div class="item_inner d-flex">
+				<div class="img_box center_img">
+					<img src="assets/imgs/item_img_3.png" class="crop_img">
+				</div>
+				<div class="text_box">
+					<h2 class="d-flex">Fresh Garlic - Medium <span class="end ion-text-end">UDI7787</span></h2>
+					<h3 class="d-flex">Red 1 kg <span class="end ion-text-end">$ 3.50</span></h3>
+					<p class="d-flex">Vegetables & Fruits <span class="end ion-text-end in_stock">{{'in_stock' | translate}}</span></p>
+				</div>
+			</div>
+		</ion-item>
+		<ion-item (click)="additems()">
+			<div class="item_inner d-flex">
+				<div class="img_box center_img">
+					<img src="assets/imgs/item_img_1.png" class="crop_img">
+				</div>
+				<div class="text_box">
+					<h2 class="d-flex">Fresh Onion - Medium <span class="end ion-text-end">UDI7787</span></h2>
+					<h3 class="d-flex">Red 1 kg <span class="end ion-text-end">$ 1.50</span></h3>
+					<p class="d-flex">Vegetables & Fruits <span class="end ion-text-end in_stock">{{'in_stock' | translate}}</span></p>
+				</div>
+			</div>
+		</ion-item>
+
+		<ion-item (click)="additems()">
+			<div class="item_inner d-flex">
+				<div class="img_box center_img">
+					<img src="assets/imgs/item_img_2.png" class="crop_img">
+				</div>
+				<div class="text_box">
+					<h2 class="d-flex">Cauliflower fresh with <span class="end ion-text-end">UDI7787</span></h2>
+					<h3 class="d-flex">left 1 kg <span class="end ion-text-end">$ 4.50</span></h3>
+					<p class="d-flex">Vegetables & Fruits <span class="end ion-text-end out_of_stock">{{'out_of_stock' | translate}}</span></p>
+				</div>
+			</div>
+		</ion-item>
+
+		<ion-item (click)="additems()">
+			<div class="item_inner d-flex">
+				<div class="img_box center_img">
+					<img src="assets/imgs/item_img_3.png" class="crop_img">
+				</div>
+				<div class="text_box">
+					<h2 class="d-flex">Fresh Garlic - Medium <span class="end ion-text-end">UDI7787</span></h2>
+					<h3 class="d-flex">Red 1 kg <span class="end ion-text-end">$ 3.50</span></h3>
+					<p class="d-flex">Vegetables & Fruits <span class="end ion-text-end in_stock">{{'in_stock' | translate}}</span></p>
+				</div>
+			</div>
+		</ion-item>
+		<ion-item (click)="additems()">
+			<div class="item_inner d-flex">
+				<div class="img_box center_img">
+					<img src="assets/imgs/item_img_1.png" class="crop_img">
+				</div>
+				<div class="text_box">
+					<h2 class="d-flex">Fresh Onion - Medium <span class="end ion-text-end">UDI7787</span></h2>
+					<h3 class="d-flex">Red 1 kg <span class="end ion-text-end">$ 1.50</span></h3>
+					<p class="d-flex">Vegetables & Fruits <span class="end ion-text-end in_stock">{{'in_stock' | translate}}</span></p>
+				</div>
+			</div>
+		</ion-item>
+
+		<ion-item (click)="additems()">
+			<div class="item_inner d-flex">
+				<div class="img_box center_img">
+					<img src="assets/imgs/item_img_2.png" class="crop_img">
+				</div>
+				<div class="text_box">
+					<h2 class="d-flex">Cauliflower fresh with <span class="end ion-text-end">UDI7787</span></h2>
+					<h3 class="d-flex">left 1 kg <span class="end ion-text-end">$ 4.50</span></h3>
+					<p class="d-flex">Vegetables & Fruits <span class="end ion-text-end out_of_stock">{{'out_of_stock' | translate}}</span></p>
+				</div>
+			</div>
+		</ion-item>
+
+		<ion-item (click)="additems()">
+			<div class="item_inner d-flex">
+				<div class="img_box center_img">
+					<img src="assets/imgs/item_img_3.png" class="crop_img">
+				</div>
+				<div class="text_box">
+					<h2 class="d-flex">Fresh Garlic - Medium <span class="end ion-text-end">UDI7787</span></h2>
+					<h3 class="d-flex">Red 1 kg <span class="end ion-text-end">$ 3.50</span></h3>
+					<p class="d-flex">Vegetables & Fruits <span class="end ion-text-end in_stock">{{'in_stock' | translate}}</span></p>
+				</div>
+			</div>
+		</ion-item>
+		<ion-item (click)="additems()">
+			<div class="item_inner d-flex">
+				<div class="img_box center_img">
+					<img src="assets/imgs/item_img_1.png" class="crop_img">
+				</div>
+				<div class="text_box">
+					<h2 class="d-flex">Fresh Onion - Medium <span class="end ion-text-end">UDI7787</span></h2>
+					<h3 class="d-flex">Red 1 kg <span class="end ion-text-end">$ 1.50</span></h3>
+					<p class="d-flex">Vegetables & Fruits <span class="end ion-text-end in_stock">{{'in_stock' | translate}}</span></p>
+				</div>
+			</div>
+		</ion-item>
+
+		<ion-item (click)="additems()">
+			<div class="item_inner d-flex">
+				<div class="img_box center_img">
+					<img src="assets/imgs/item_img_2.png" class="crop_img">
+				</div>
+				<div class="text_box">
+					<h2 class="d-flex">Cauliflower fresh with <span class="end ion-text-end">UDI7787</span></h2>
+					<h3 class="d-flex">left 1 kg <span class="end ion-text-end">$ 4.50</span></h3>
+					<p class="d-flex">Vegetables & Fruits <span class="end ion-text-end out_of_stock">{{'out_of_stock' | translate}}</span></p>
+				</div>
+			</div>
+		</ion-item>
+
+		<ion-item (click)="additems()">
+			<div class="item_inner d-flex">
+				<div class="img_box center_img">
+					<img src="assets/imgs/item_img_3.png" class="crop_img">
+				</div>
+				<div class="text_box">
+					<h2 class="d-flex">Fresh Garlic - Medium <span class="end ion-text-end">UDI7787</span></h2>
+					<h3 class="d-flex">Red 1 kg <span class="end ion-text-end">$ 3.50</span></h3>
+					<p class="d-flex">Vegetables & Fruits <span class="end ion-text-end in_stock">{{'in_stock' | translate}}</span></p>
+				</div>
+			</div>
+		</ion-item>
+		<ion-item (click)="additems()">
+			<div class="item_inner d-flex">
+				<div class="img_box center_img">
+					<img src="assets/imgs/item_img_1.png" class="crop_img">
+				</div>
+				<div class="text_box">
+					<h2 class="d-flex">Fresh Onion - Medium <span class="end ion-text-end">UDI7787</span></h2>
+					<h3 class="d-flex">Red 1 kg <span class="end ion-text-end">$ 1.50</span></h3>
+					<p class="d-flex">Vegetables & Fruits <span class="end ion-text-end in_stock">{{'in_stock' | translate}}</span></p>
+				</div>
+			</div>
+		</ion-item>
+
+		<ion-item (click)="additems()">
+			<div class="item_inner d-flex">
+				<div class="img_box center_img">
+					<img src="assets/imgs/item_img_2.png" class="crop_img">
+				</div>
+				<div class="text_box">
+					<h2 class="d-flex">Cauliflower fresh with <span class="end ion-text-end">UDI7787</span></h2>
+					<h3 class="d-flex">left 1 kg <span class="end ion-text-end">$ 4.50</span></h3>
+					<p class="d-flex">Vegetables & Fruits <span class="end ion-text-end out_of_stock">{{'out_of_stock' | translate}}</span></p>
+				</div>
+			</div>
+		</ion-item>
+
+		<ion-item (click)="additems()">
+			<div class="item_inner d-flex">
+				<div class="img_box center_img">
+					<img src="assets/imgs/item_img_3.png" class="crop_img">
+				</div>
+				<div class="text_box">
+					<h2 class="d-flex">Fresh Garlic - Medium <span class="end ion-text-end">UDI7787</span></h2>
+					<h3 class="d-flex">Red 1 kg <span class="end ion-text-end">$ 3.50</span></h3>
+					<p class="d-flex">Vegetables & Fruits <span class="end ion-text-end in_stock">{{'in_stock' | translate}}</span></p>
+				</div>
+			</div>
+		</ion-item>
+		<ion-item (click)="additems()">
+			<div class="item_inner d-flex">
+				<div class="img_box center_img">
+					<img src="assets/imgs/item_img_1.png" class="crop_img">
+				</div>
+				<div class="text_box">
+					<h2 class="d-flex">Fresh Onion - Medium <span class="end ion-text-end">UDI7787</span></h2>
+					<h3 class="d-flex">Red 1 kg <span class="end ion-text-end">$ 1.50</span></h3>
+					<p class="d-flex">Vegetables & Fruits <span class="end ion-text-end in_stock">{{'in_stock' | translate}}</span></p>
+				</div>
+			</div>
+		</ion-item>
+
+		<ion-item (click)="additems()">
+			<div class="item_inner d-flex">
+				<div class="img_box center_img">
+					<img src="assets/imgs/item_img_2.png" class="crop_img">
+				</div>
+				<div class="text_box">
+					<h2 class="d-flex">Cauliflower fresh with <span class="end ion-text-end">UDI7787</span></h2>
+					<h3 class="d-flex">left 1 kg <span class="end ion-text-end">$ 4.50</span></h3>
+					<p class="d-flex">Vegetables & Fruits <span class="end ion-text-end out_of_stock">{{'out_of_stock' | translate}}</span></p>
+				</div>
+			</div>
+		</ion-item>
+
+		<ion-item (click)="additems()">
+			<div class="item_inner d-flex">
+				<div class="img_box center_img">
+					<img src="assets/imgs/item_img_3.png" class="crop_img">
+				</div>
+				<div class="text_box">
+					<h2 class="d-flex">Fresh Garlic - Medium <span class="end ion-text-end">UDI7787</span></h2>
+					<h3 class="d-flex">Red 1 kg <span class="end ion-text-end">$ 3.50</span></h3>
+					<p class="d-flex">Vegetables & Fruits <span class="end ion-text-end in_stock">{{'in_stock' | translate}}</span></p>
+				</div>
+			</div>
+		</ion-item>
+	</ion-list>
+
+	<ion-fab vertical="bottom" horizontal="end" slot="fixed">
+		<ion-fab-button (click)="additems()">
+			 +
+		</ion-fab-button>
+	</ion-fab>
+</ion-content>

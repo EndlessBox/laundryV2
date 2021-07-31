@@ -1,0 +1,29 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start" mode="md">
+            <ion-back-button text="" name="arrow-back-outline"></ion-back-button>
+        </ion-buttons>
+        <ion-title>{{'verification' | translate}}</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="form">
+        <p class="ion-text-center">{{'please_add_verification_sent_on' | translate}} <br>+1 987 654 3210</p>
+        
+        <ion-list lines="none">
+            <ion-item lines="none">
+                <!--                    <ion-label position="fixed">{{'mobile_number' | translate}}</ion-label>-->
+                <div class="item_inner d-flex">
+                    <!--                    <ion-icon class="zmdi zmdi-email ion-text-start"></ion-icon>-->
+                    <ion-input class="ion-text-center" mode="md" placeholder="5887" maxlength="4"></ion-input>
+                </div>
+            </ion-item>
+        </ion-list>
+
+        <ion-button size="large" shape="block" class="btn" (click)="tabs()">
+            {{'Submit' | translate}}
+        </ion-button>
+        <h2 class="d-flex">{{'resend' | translate}} <span class="end">1:03 {{'min_left' | translate}}</span></h2>
+    </div>
+</ion-content>

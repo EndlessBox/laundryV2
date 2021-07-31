@@ -1,0 +1,48 @@
+<!--
+<ion-header>
+  <ion-toolbar>
+    <ion-title>select-task</ion-title>
+  </ion-toolbar>
+</ion-header>
+-->
+
+<ion-content>
+    <div class="form">
+        <ion-list lines="none">
+            <h1>Tshirt</h1>
+            <ion-item lines="none">
+                <div class="item_inner d-flex">
+                    <ion-checkbox checked="true"></ion-checkbox>
+                    <h2 class="d-flex">Wash Only <span class="end">$10</span></h2>
+                </div>
+            </ion-item>
+
+            <ion-item lines="none">
+                <div class="item_inner d-flex">
+                    <ion-checkbox></ion-checkbox>
+                    <h2 class="d-flex">Iron Only <span class="end">$8</span></h2>
+                </div>
+            </ion-item>
+
+            <ion-item lines="none">
+                <div class="item_inner d-flex">
+                    <ion-checkbox></ion-checkbox>
+                    <h2 class="d-flex">Wash & Iron <span class="end">$16</span></h2>
+                </div>
+            </ion-item>
+
+            <ion-item lines="none">
+                <div class="item_inner d-flex">
+                    <ion-checkbox></ion-checkbox>
+                    <h2 class="d-flex">Dry Clean <span class="end">$16</span></h2>
+                </div>
+            </ion-item>
+        </ion-list>
+        <div class="btn_container d-flex">
+            <div class="btn_grup end">
+                <h2 (click)="dismiss()">{{'cancel' | translate}}</h2>
+                <h2 class="done" (click)="dismiss()">{{'done' | translate}}</h2>
+            </div>
+        </div>
+    </div>
+</ion-content>

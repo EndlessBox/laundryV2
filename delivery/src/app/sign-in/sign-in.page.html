@@ -1,0 +1,68 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title></ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <img src="assets/imgs/logo.png" class="logo">
+    <h3 class="ion-text-center">{{"Sign_in_to" | translate}} QuickDelivery</h3>
+    <div class="form">
+        <ion-list lines="none">
+            <ion-item lines="none">
+                <div class="item_inner d-flex">
+                    <ion-icon class="ion-text-start zmdi zmdi-globe"></ion-icon>
+                    <div class="input_box">
+                        <div class="input_box">
+                            <ion-label mode="md" position="floating">{{"select_country" | translate}}</ion-label>
+                            <ion-select mode="md" okText="{{'ok' | translate}}" cancelText="{{'cancel' | translate}}">
+                                <ion-select-option value="1">Brazil</ion-select-option>
+                                <ion-select-option value="2">India</ion-select-option>
+                                <ion-select-option value="3">Ireland</ion-select-option>
+                                <ion-select-option value="4">Japan</ion-select-option>
+                                <ion-select-option value="5">Kenya</ion-select-option>
+                                <ion-select-option value="6">Latvia</ion-select-option>
+                                <ion-select-option value="7">Martinique</ion-select-option>
+                                <ion-select-option value="8">Mexico</ion-select-option>
+                                <ion-select-option value="9">Monaco</ion-select-option>
+                                <ion-select-option value="10">Nepal</ion-select-option>
+                            </ion-select>
+                        </div>
+                    </div>
+                </div>
+            </ion-item>
+            <ion-item lines="none">
+                <div class="item_inner d-flex">
+                    <ion-icon class="ion-text-start zmdi zmdi-smartphone"></ion-icon>
+                    <div class="input_box">
+                        <ion-label mode="md" position="floating">{{"phone" | translate}}</ion-label>
+                        <ion-input mode="md" type="number"></ion-input>
+                    </div>
+                </div>
+            </ion-item>
+            <ion-item lines="none">
+                <div class="item_inner d-flex">
+                    <ion-icon class="ion-text-start zmdi zmdi-lock"></ion-icon>
+                    <div class="input_box d-flex">
+                        <div style="width: 100%">
+                            <ion-label mode="md" position="floating">{{"password" | translate}}</ion-label>
+                            <ion-input mode="md" type="password"></ion-input>
+                        </div>
+                        <h5 slot="end" (click)="password()">{{"forgot" | translate}}</h5>
+                    </div>
+                </div>
+            </ion-item>
+        </ion-list>
+
+        <ion-button size="large" expand="block" class="btn" (click)="tabs()">{{'login' | translate}}</ion-button>
+
+
+    </div>
+</ion-content>
+
+<ion-footer class="ion-no-border">
+    <div class="fixed-bottom">
+        <p class="ion-text-center">{{"not_registered" | translate}}</p>
+        <ion-button size="large" expand="block" class="btn" fill="outline" (click)="signup()">{{'register_nw' | translate}}</ion-button>
+    </div>
+</ion-footer>

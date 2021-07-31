@@ -1,0 +1,69 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start" mode="md">
+            <ion-back-button text="" name="arrow-back-outline"></ion-back-button>
+        </ion-buttons>
+        <ion-title>{{'Register_Now' | translate}}</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="form">
+
+        <div class="img_box center_img">
+            <!--            <img src="assets/imgs/face.png" class="crop_img">-->
+            <ion-icon class="zmdi zmdi-camera ion-text-center"></ion-icon>
+        </div>
+        <ion-list lines="none">
+            <ion-item lines="none">
+                <!--                    <ion-label position="fixed">{{'mobile_number' | translate}}</ion-label>-->
+                <div class="item_inner d-flex">
+                    <ion-icon class="zmdi zmdi-account ion-text-start"></ion-icon>
+                    <div class="input_box">
+                        <ion-label position="floating">{{'Enter_Full_Name' | translate}}</ion-label>
+                        <ion-input mode="md" type="name"></ion-input>
+                    </div>
+                </div>
+            </ion-item>
+
+            <ion-item lines="none">
+                <!--                    <ion-label position="fixed">{{'mobile_number' | translate}}</ion-label>-->
+                <div class="item_inner d-flex">
+                    <ion-icon class="zmdi zmdi-email ion-text-start"></ion-icon>
+                    <div class="input_box">
+                        <ion-label position="floating">{{'Email_Address' | translate}}</ion-label>
+                        <ion-input mode="md" type="email"></ion-input>
+                    </div>
+                </div>
+            </ion-item>
+
+            <ion-item lines="none">
+                <!--                    <ion-label position="fixed">{{'mobile_number' | translate}}</ion-label>-->
+                <div class="item_inner d-flex">
+                    <ion-icon class="zmdi zmdi-smartphone-iphone ion-text-start"></ion-icon>
+                    <div class="input_box">
+                        <ion-label position="floating">{{'Phone_Number' | translate}}</ion-label>
+                        <ion-input mode="md" type="number"></ion-input>
+                    </div>
+                </div>
+            </ion-item>
+
+            <ion-item lines="none">
+                <!--                    <ion-label position="fixed">{{'mobile_number' | translate}}</ion-label>-->
+                <div class="item_inner d-flex">
+                    <ion-icon class="zmdi zmdi-lock ion-text-start"></ion-icon>
+                    <div class="input_box">
+                        <ion-label position="floating">{{'Create_Password' | translate}}</ion-label>
+                        <ion-input mode="md" type="text"></ion-input>
+                    </div>
+                </div>
+            </ion-item>
+        </ion-list>
+    </div>
+</ion-content>
+
+<ion-footer class="ion-no-border">
+    <ion-button size="large" shape="block" class="btn" (click)="verification()">
+        {{'Register_Now' | translate}}
+    </ion-button>
+</ion-footer>

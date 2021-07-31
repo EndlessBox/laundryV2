@@ -1,0 +1,105 @@
+.chat_container {
+    padding: 13px 13px;
+    flex-wrap: wrap;
+    padding-bottom: 70px;
+
+    .chat_box {
+        width: auto !important;
+        margin-bottom: 13px;
+        min-width: 70%;
+        align-items: flex-start;
+
+        .chat {
+            min-width: 100px;
+            box-shadow: 0 19px 14px -8px rgba(0, 0, 0, 0.1);
+            padding: 8px 11px;
+            width: 100%;
+
+            h2 {
+                margin: 0;
+                font-size: .86rem;
+                padding-bottom: 4px;
+                color: var(--text-black);
+                font-weight: 600;
+                width: 100%;
+                line-height: 18px;
+
+            }
+        }
+
+        p {
+            margin: 0;
+            font-size: .75rem;
+            font-weight: 400;
+        }
+
+        &.received {
+            .chat {
+                background: var(--white);
+                border-radius: 10px 10px 10px 0;
+
+                p {
+                    color: var(--text-light);
+                }
+            }
+        }
+
+        &.send {
+            margin-left: auto;
+            margin-right: 0;
+
+            .chat {
+                background: var(--primary);
+                margin-left: auto;
+                margin-right: 0;
+                color: var(--white);
+                border-radius: 10px 10px 0px 10px;
+                text-align: right;
+
+                h2 {
+                    font-weight: 400;
+                    color: var(--white);
+                }
+
+                p {
+                    opacity: 0.7;
+                    color: var(--white);
+                }
+            }
+        }
+    }
+}
+
+ion-footer {
+    background: var(--white);
+
+    .form {
+        ion-item {
+            margin: 0;
+            border: none !important;
+            padding: 14px 0;
+
+            &::after {
+                display: none;
+            }
+
+            ion-input {
+                font-size: 1.1rem !important;
+                --placeholder-font-weight: 500 !important;
+                --placeholder-color: var(--text-light) !important;
+                letter-spacing: 0 !important;
+            }
+        }
+
+        .send_btn {
+            min-width: fit-content;
+
+            ion-icon {
+                color: var(--primary);
+                font-size: 2rem;
+                min-height: 44px;
+                line-height: 50px;
+            }
+        }
+    }
+}

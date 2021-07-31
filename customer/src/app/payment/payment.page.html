@@ -1,0 +1,60 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button text="" name="arrow-back-outline"></ion-back-button>
+        </ion-buttons>
+        <ion-title>
+            {{"Payment" | translate}}
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="bg_color" fullscreen>
+    <ion-list lines="none">
+        <h2>{{"Select_Payment_Method" | translate}}</h2>
+        <ion-radio-group>
+            <ion-item>
+                <div class="item_inner d-flex">
+                    <ion-radio value="PayPal"></ion-radio>
+                    <h3>PayPal</h3>
+                </div>
+            </ion-item>   
+            
+            <ion-item>
+                <div class="item_inner d-flex">
+                    <ion-radio value="PayUMoney"></ion-radio>
+                    <h3>PayUMoney</h3>
+                </div>
+            </ion-item>   
+            
+            <ion-item>
+                <div class="item_inner d-flex">
+                    <ion-radio value="Bank_Transfer"></ion-radio>
+                    <h3>Bank Transfer</h3>
+                </div>
+            </ion-item> 
+            
+            <ion-item>
+                <div class="item_inner d-flex">
+                    <ion-radio value="Cheque_Payment"></ion-radio>
+                    <h3>Cheque Payment</h3>
+                </div>
+            </ion-item>   
+            
+            <ion-item>
+                <div class="item_inner d-flex">
+                    <ion-radio value="cash_on_delivery"></ion-radio>
+                    <h3>Cash On Delivery</h3>
+                </div>
+            </ion-item>
+        </ion-radio-group>
+    </ion-list>
+</ion-content>
+
+<ion-footer class="ion-no-border">
+    <div class="btn" (click)="tabs()">
+    <h2 class="d-flex">{{'Amount_Payable' | translate}} $75.00 
+        <span class="end">{{'pay_now' | translate}} <ion-icon class="zmdi zmdi-chevron-right ion-text-end "></ion-icon></span>
+        </h2>
+    </div>
+</ion-footer>

@@ -1,0 +1,103 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button text="" name="arrow-back-outline"></ion-back-button>
+        </ion-buttons>
+        <ion-title>
+            {{"confirm_order" | translate}}
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="bg_color" fullscreen>
+ 
+
+    <ion-card class="info">
+        <ion-row>
+            <ion-col size="6">
+                <h2>{{'Pick_up' | translate}}</h2>
+                <h3>Today, 21 June</h3>
+                <h4>01:00 pm - 02:00 pm</h4>
+            </ion-col>
+
+            <ion-col size="6">
+                <h2>{{'Delivery' | translate}}</h2>
+                <h3>Tomorrow, 22 June</h3>
+                <h4>09:00 am - 10:00 am</h4>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col size="12">
+                <h2>{{'pick_up_address' | translate}}</h2>
+                <h3>B11 Old Ford Street, Workshop tower..</h3>
+            </ion-col>
+        </ion-row>
+    </ion-card>
+
+    <ion-card class="item_info">
+        <h2>{{'cloth_list' | translate}}</h2>
+        <div class="item_list">
+            <div class="item">
+                <h3 class="d-flex">
+                    <span class="quantity">2</span>
+                    <span class="multiply">x</span>
+                    <span class="item_name">Shirts (Man)</span>
+                    <span class="for_this">Wash & Iron</span>
+                    <span class="amount end ion-text-end">$20</span>
+                </h3>
+            </div>
+            <div class="item">
+                <h3 class="d-flex">
+                    <span class="quantity">3</span>
+                    <span class="multiply">x</span>
+                    <span class="item_name">Trouser (Man)</span>
+                    <span class="for_this">Wash & Iron</span>
+                    <span class="amount end ion-text-end">$25</span>
+                </h3>
+            </div>
+            <div class="item">
+                <h3 class="d-flex">
+                    <span class="quantity">1</span>
+                    <span class="multiply">x</span>
+                    <span class="item_name">Jeans (Man)</span>
+                    <span class="for_this">Wash & Iron</span>
+                    <span class="amount end ion-text-end">$10</span>
+                </h3>
+            </div>
+            <div class="item">
+                <h3 class="d-flex">
+                    <span class="quantity">1</span>
+                    <span class="multiply">x</span>
+                    <span class="item_name">T-shirt (Woman)</span>
+                    <span class="for_this">Wash & Iron</span>
+                    <span class="amount end ion-text-end">$25</span>
+                </h3>
+            </div>
+        </div>
+    </ion-card>
+
+</ion-content>
+
+
+<ion-footer class="ion-no-border">
+<!--
+    <ion-card class="promo-code" (click)="promocode()">
+        <h2 class="d-flex">
+            <ion-icon class="zmdi zmdi-label"></ion-icon>{{'Have_Promocode' | translate}}
+        </h2>
+    </ion-card>
+-->
+
+    <ion-card class="payment_info">
+        <h5 class="d-flex">{{'Sub_Total' | translate}} <span class="end ion-text-end">$73</span></h5>
+        <h5 class="d-flex">{{'service_fee' | translate}} <span class="end ion-text-end">$5</span></h5>
+        <h2 class="d-flex ">{{'paid_via' | translate}} Credit Card<span class="end ion-text-end">$78</span></h2>
+    </ion-card>
+
+    <ion-footer class="ion-no-border">
+        <ion-button size="large" shape="full" class="btn" (click)="payment()">
+            {{'pay_now' | translate}}
+            <ion-icon class="zmdi zmdi-chevron-right ion-text-end"></ion-icon>
+        </ion-button>
+    </ion-footer>
+</ion-footer>

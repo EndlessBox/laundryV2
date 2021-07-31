@@ -1,0 +1,2183 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button text="" name="arrow-back-outline"></ion-back-button>
+        </ion-buttons>
+        <ion-title>
+            {{"Select_Clothes" | translate}}
+        </ion-title>
+    </ion-toolbar>
+
+    <ion-segment (ionChange)="segmentChanged()" [(ngModel)]="segment">
+        <ion-segment-button value="0">
+            <ion-label>Man</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="1">
+            <ion-label>Woman</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="2">
+            <ion-label>Kids</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="3">
+            <ion-label>Other</ion-label>
+        </ion-segment-button>
+    </ion-segment>
+
+</ion-header>
+
+
+<ion-content class="bg_color" fullscreen>
+    <ion-slides #slides (ionSlideDidChange)="slideChanged()">
+        <ion-slide>
+            <ion-list lines="none">
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/t-shirt.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>T-shirt</h2>
+                                <h3>Wash only, Dry Clean</h3>
+                            </div>
+                            <!--                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>-->
+                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/Jeans.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>Jeans</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/Shirt.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>Shirt</h2>
+                                <h3>Wash only</h3>
+                            </div>
+                            <!--                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>-->
+                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/Trouser.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>Trouser</h2>
+                                <h3>Wash & Iron</h3>
+                            </div>
+                            <!--                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>-->
+                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/Jacket.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>Jacket</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/Short.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>Short</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/t-shirt.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>T-shirt</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/Jeans.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>Jeans</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/Shirt.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>Shirt</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/Trouser.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>Trouser</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/Jacket.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>Jacket</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/Short.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>Short</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/t-shirt.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>T-shirt</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/Jeans.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>Jeans</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/Shirt.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>Shirt</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/Trouser.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>Trouser</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/Jacket.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>Jacket</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/Short.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>Short</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/t-shirt.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>T-shirt</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/Jeans.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>Jeans</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/Shirt.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>Shirt</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/Trouser.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>Trouser</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/Jacket.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>Jacket</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/Short.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>Short</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/t-shirt.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>T-shirt</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/Jeans.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>Jeans</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/Shirt.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>Shirt</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/Trouser.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>Trouser</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/Jacket.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>Jacket</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/Short.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>Short</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/t-shirt.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>T-shirt</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/Jeans.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>Jeans</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/Shirt.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>Shirt</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/Trouser.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>Trouser</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/Jacket.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>Jacket</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/Short.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>Short</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+            </ion-list>
+        </ion-slide>
+
+
+        <ion-slide>
+            <ion-list lines="none">
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/Jacket.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>Jacket</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/Short.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>Short</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/t-shirt.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>T-shirt</h2>
+                                <h3>Wash only</h3>
+                            </div>
+                            <!--                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>-->
+                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/Jeans.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>Jeans</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/Shirt.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>Shirt</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/Trouser.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>Trouser</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/Jacket.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>Jacket</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/Short.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>Short</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/t-shirt.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>T-shirt</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/Jeans.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>Jeans</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/Shirt.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>Shirt</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/Trouser.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>Trouser</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/Jacket.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>Jacket</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/Short.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>Short</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/t-shirt.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>T-shirt</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/Jeans.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>Jeans</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/Shirt.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>Shirt</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/Trouser.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>Trouser</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/Jacket.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>Jacket</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/Short.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>Short</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/t-shirt.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>T-shirt</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/Jeans.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>Jeans</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/Shirt.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>Shirt</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/Trouser.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>Trouser</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/Jacket.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>Jacket</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/Short.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>Short</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/t-shirt.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>T-shirt</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/Jeans.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>Jeans</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/Shirt.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>Shirt</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/Trouser.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>Trouser</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/Jacket.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>Jacket</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/Short.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>Short</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/t-shirt.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>T-shirt</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/Jeans.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>Jeans</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/Shirt.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>Shirt</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/Trouser.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>Trouser</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+
+            </ion-list>
+        </ion-slide>
+
+        <ion-slide>
+            <ion-list lines="none">
+
+
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/Shirt.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>Shirt</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/Trouser.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>Trouser</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/t-shirt.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>T-shirt</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/Jeans.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>Jeans</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/Jacket.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>Jacket</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/Short.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>Short</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+            </ion-list>
+        </ion-slide>
+
+
+        <ion-slide>
+            <ion-list lines="none">
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/t-shirt.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>T-shirt</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/Jeans.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>Jeans</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/Shirt.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>Shirt</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/Trouser.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>Trouser</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/Jacket.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>Jacket</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/Short.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>Short</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/Shirt.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>Shirt</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/Trouser.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>Trouser</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/t-shirt.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>T-shirt</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/Jeans.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>Jeans</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/Jacket.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>Jacket</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/Short.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>Short</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+            </ion-list>
+        </ion-slide>
+
+
+        <ion-slide>
+            <ion-list lines="none">
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/t-shirt.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>T-shirt</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/Jeans.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>Jeans</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/Shirt.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>Shirt</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/Trouser.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>Trouser</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/Jacket.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>Jacket</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/Short.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>Short</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/Shirt.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>Shirt</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/Trouser.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>Trouser</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/t-shirt.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>T-shirt</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/Jeans.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>Jeans</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/Jacket.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>Jacket</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/Short.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>Short</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+            </ion-list>
+        </ion-slide>
+
+
+        <ion-slide>
+            <ion-list lines="none">
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/t-shirt.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>T-shirt</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/Jeans.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>Jeans</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/Shirt.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>Shirt</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/Trouser.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>Trouser</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/Jacket.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>Jacket</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/Short.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>Short</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/Shirt.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>Shirt</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/Trouser.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>Trouser</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/t-shirt.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>T-shirt</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/Jeans.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>Jeans</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/Jacket.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>Jacket</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/Short.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>Short</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+            </ion-list>
+        </ion-slide>
+
+
+        <ion-slide>
+            <ion-list lines="none">
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/t-shirt.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>T-shirt</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/Jeans.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>Jeans</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/Shirt.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>Shirt</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/Trouser.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>Trouser</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/Jacket.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>Jacket</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/Short.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>Short</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/Shirt.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>Shirt</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/Trouser.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>Trouser</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/t-shirt.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>T-shirt</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/Jeans.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>Jeans</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/Jacket.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>Jacket</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/Short.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>Short</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+            </ion-list>
+        </ion-slide>
+
+
+        <ion-slide>
+            <ion-list lines="none">
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/t-shirt.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>T-shirt</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/Jeans.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>Jeans</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/Shirt.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>Shirt</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/Trouser.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>Trouser</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/Jacket.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>Jacket</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item (click)="select_task()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box">
+                            <img src="assets/imgs/Short.jpg">
+                        </div>
+                        <div class="text_box d-flex">
+                            <div class="text_box_inner">
+                                <h2>Short</h2>
+                                <!--                                <h3>Wash only, Dry Clean</h3>-->
+                            </div>
+                            <h4 class="add_to_cart end"> {{"add_to_cart" | translate}}</h4>
+                            <!--                            <h4 class="modify_item end"> {{"modify_item" | translate}}</h4>-->
+                        </div>
+                    </div>
+                </ion-item>
+            </ion-list>
+        </ion-slide>
+    </ion-slides>
+</ion-content>
+
+<ion-footer class="ion-no-border">
+    <div class="btn" (click)="cart()">
+        <h2 class="d-flex">{{'total' | translate}} $75.00
+            <small>4 {{'items' | translate}}</small>
+            <span class="end">{{'Next' | translate}}
+                <ion-icon class="zmdi zmdi-chevron-right ion-text-end "></ion-icon>
+            </span>
+        </h2>
+    </div>
+</ion-footer>

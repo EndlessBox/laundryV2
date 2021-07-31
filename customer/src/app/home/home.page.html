@@ -1,0 +1,259 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>
+            <strong>Quick</strong>Wash
+        </ion-title>
+    </ion-toolbar>
+        <div *ngIf="config.showBuyPromt" (click)="buyappalert()" class="buy_this_app">
+        <h2>
+            {{"buy_this_app" | translate}}
+        </h2>
+    </div>
+</ion-header>
+
+<ion-content class="bg_color" fullscreen>
+    <div class="banner">
+        <ion-slides pager="true" loop="true">
+            <ion-slide (click)="offers()">
+                <div class="img_box center_img">
+                    <img src="assets/imgs/banner.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2>Flat 50% off on <br>First Order</h2>
+                    <h3 class="d-flex">{{'view_all_offers' | translate}}
+                        <ion-icon class="zmdi zmdi-arrow-right end ion-text-end"></ion-icon>
+                    </h3>
+                </div>
+            </ion-slide>
+            <ion-slide (click)="offers()">
+                <div class="img_box center_img">
+                    <img src="assets/imgs/banner.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2>Flat 50% off on <br>First Order</h2>
+                    <h3 class="d-flex">{{'view_all_offers' | translate}}
+                        <ion-icon class="zmdi zmdi-arrow-right end ion-text-end"></ion-icon>
+                    </h3>
+                </div>
+            </ion-slide>
+            <ion-slide (click)="offers()">
+                <div class="img_box center_img">
+                    <img src="assets/imgs/banner.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2>Flat 50% off on <br>First Order</h2>
+                    <h3 class="d-flex">{{'view_all_offers' | translate}}
+                        <ion-icon class="zmdi zmdi-arrow-right end ion-text-end"></ion-icon>
+                    </h3>
+                </div>
+            </ion-slide>
+        </ion-slides>
+    </div>
+
+    <div class="services">
+        <h2>{{'services' | translate}}</h2>
+
+        <div class="scroll-x">
+            <div class="service" (click)="select_clothes()">
+                <div class="img_box">
+                    <img src="assets/imgs/washing.png">
+                </div>
+                <div class="text_box">
+                    <h3>Wash & Fold</h3>
+                    <h4>Min 12 Hours</h4>
+                </div>
+            </div>
+
+            <div class="service" (click)="select_clothes()">
+                <div class="img_box">
+                    <img src="assets/imgs/iron.png">
+                </div>
+                <div class="text_box">
+                    <h3>Wash & Iron</h3>
+                    <h4>Min 6 Hours</h4>
+                </div>
+            </div>
+
+            <div class="service" (click)="select_clothes()">
+                <div class="img_box">
+                    <img src="assets/imgs/dryclean.png">
+                </div>
+                <div class="text_box">
+                    <h3>Dry Clean</h3>
+                    <h4>Min 24 Hours</h4>
+                </div>
+            </div>
+            <div class="service" (click)="select_clothes()">
+                <div class="img_box">
+                    <img src="assets/imgs/washing.png">
+                </div>
+                <div class="text_box">
+                    <h3>Wash & Fold</h3>
+                    <h4>Min 12 Hours</h4>
+                </div>
+            </div>
+
+            <div class="service" (click)="select_clothes()">
+                <div class="img_box">
+                    <img src="assets/imgs/iron.png">
+                </div>
+                <div class="text_box">
+                    <h3>Wash & Iron</h3>
+                    <h4>Min 6 Hours</h4>
+                </div>
+            </div>
+
+            <div class="service" (click)="select_clothes()">
+                <div class="img_box">
+                    <img src="assets/imgs/dryclean.png">
+                </div>
+                <div class="text_box">
+                    <h3>Dry Clean</h3>
+                    <h4>Min 24 Hours</h4>
+                </div>
+            </div>
+            <div class="service" (click)="select_clothes()">
+                <div class="img_box">
+                    <img src="assets/imgs/washing.png">
+                </div>
+                <div class="text_box">
+                    <h3>Wash & Fold</h3>
+                    <h4>Min 12 Hours</h4>
+                </div>
+            </div>
+
+            <div class="service" (click)="select_clothes()">
+                <div class="img_box">
+                    <img src="assets/imgs/iron.png">
+                </div>
+                <div class="text_box">
+                    <h3>Wash & Iron</h3>
+                    <h4>Min 6 Hours</h4>
+                </div>
+            </div>
+
+            <div class="service" (click)="select_clothes()">
+                <div class="img_box">
+                    <img src="assets/imgs/dryclean.png">
+                </div>
+                <div class="text_box">
+                    <h3>Dry Clean</h3>
+                    <h4>Min 24 Hours</h4>
+                </div>
+            </div>
+            <div class="service" (click)="select_clothes()">
+                <div class="img_box">
+                    <img src="assets/imgs/washing.png">
+                </div>
+                <div class="text_box">
+                    <h3>Wash & Fold</h3>
+                    <h4>Min 12 Hours</h4>
+                </div>
+            </div>
+
+            <div class="service" (click)="select_clothes()">
+                <div class="img_box">
+                    <img src="assets/imgs/iron.png">
+                </div>
+                <div class="text_box">
+                    <h3>Wash & Iron</h3>
+                    <h4>Min 6 Hours</h4>
+                </div>
+            </div>
+
+            <div class="service" (click)="select_clothes()">
+                <div class="img_box">
+                    <img src="assets/imgs/dryclean.png">
+                </div>
+                <div class="text_box">
+                    <h3>Dry Clean</h3>
+                    <h4>Min 24 Hours</h4>
+                </div>
+            </div>
+            <div class="service" (click)="select_clothes()">
+                <div class="img_box">
+                    <img src="assets/imgs/washing.png">
+                </div>
+                <div class="text_box">
+                    <h3>Wash & Fold</h3>
+                    <h4>Min 12 Hours</h4>
+                </div>
+            </div>
+
+            <div class="service" (click)="select_clothes()">
+                <div class="img_box">
+                    <img src="assets/imgs/iron.png">
+                </div>
+                <div class="text_box">
+                    <h3>Wash & Iron</h3>
+                    <h4>Min 6 Hours</h4>
+                </div>
+            </div>
+
+            <div class="service" (click)="select_clothes()">
+                <div class="img_box">
+                    <img src="assets/imgs/dryclean.png">
+                </div>
+                <div class="text_box">
+                    <h3>Dry Clean</h3>
+                    <h4>Min 24 Hours</h4>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <ion-list lines="none">
+        <h1 class="d-flex">{{'Your_Active_Order' | translate}} (2) <span class="end">{{'Past_Orders' | translate}}</span></h1>
+
+<!--
+        <ion-item class="no_order">
+            <div class="item_inner d-flex">
+                <div class="img_box">
+                 <ion-icon class="zmdi zmdi-plus ion-text-center"></ion-icon>
+                </div>
+                <div class="text_box">
+                    <h2>{{'no_orders_found' | translate}} <span>{{'order_now' | translate}}</span></h2>
+                </div>
+            </div>
+        </ion-item>   
+-->
+        
+<!--
+        <ion-item class="no_login">
+            <div class="item_inner d-flex">
+                <div class="img_box">
+                 <ion-icon class="zmdi zmdi-account-add ion-text-center"></ion-icon>
+                </div>
+                <div class="text_box">
+                    <h2>{{'login_sign_up_to_view_orders' | translate}}</h2>
+                </div>
+            </div>
+        </ion-item>  
+-->
+        
+        <ion-item (click)="order_info()">
+            <div class="item_inner d-flex">
+                <div class="img_box">
+                    <img src="assets/imgs/confirmed.png">
+                </div>
+                <div class="text_box">
+                    <h2 class="d-flex">{{'Order_No' | translate}}: 22145052 <span class="end">$256</span></h2>
+                    <h3 class="d-flex">{{'Order_Confirmed' | translate}}  <span class="end">25 June, 2018</span></h3>
+                </div>
+            </div>
+        </ion-item>  
+        
+        <ion-item (click)="order_info()">
+            <div class="item_inner d-flex">
+                <div class="img_box">
+                    <img src="assets/imgs/inporcess.png">
+                </div>
+                <div class="text_box">
+                    <h2 class="d-flex">{{'Order_No' | translate}} 22145483 <span class="end">$256</span></h2>
+                    <h3 class="d-flex">{{'in_process' | translate}}   <span class="end">23 June, 2018</span></h3>
+                </div>
+            </div>
+        </ion-item>
+    </ion-list>
+</ion-content>

@@ -1,0 +1,75 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+              <ion-back-button text="" name="arrow-back-outline"></ion-back-button>
+        </ion-buttons>
+        <ion-title>
+            {{"select_address" | translate}}
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="bg_color" fullscreen>
+    <div class="form">
+        <h1>{{'select_pickup_address' | translate}}</h1>
+        <ion-list lines="none">
+            <ion-radio-group>
+                <ion-item lines="none">
+                    <ion-radio slot="start" value="home"></ion-radio>
+                    <ion-label class="d-flex">
+                        <div class="img_container">
+                            <div class="img_box">
+                                <img src="assets/imgs/home.png">
+                                <img src="assets/imgs/home_active.png">
+                            </div>
+                            <h2>{{'home' | translate}}</h2>
+                        </div>
+                        <p>
+                            14134, Silver Green Street <br> 2nd Avenue, Hemiltone, <br> New York, USA
+                        </p>
+                    </ion-label>
+                </ion-item>
+                <ion-item lines="none">
+                    <ion-radio slot="start" value="office"></ion-radio>
+                    <ion-label class="d-flex">
+                        <div class="img_container">
+                            <div class="img_box">
+                                <img src="assets/imgs/office.png">
+                                <img src="assets/imgs/office_active.png">
+                            </div>
+                            <h2>{{'office' | translate}}</h2>
+                        </div>
+                        <p>
+                            14134, Silver Green Street <br> 2nd Avenue, Hemiltone, <br> New York, USA
+                        </p>
+                    </ion-label>
+                </ion-item>
+                <ion-item lines="none">
+                    <ion-radio slot="start" value="Other"></ion-radio>
+                    <ion-label class="d-flex">
+                        <div class="img_container">
+                            <div class="img_box">
+                                <img src="assets/imgs/location.png">
+                                <img src="assets/imgs/location_active.png">
+                            </div>
+                            <h2>{{'other' | translate}}</h2>
+                        </div>
+                        <p>
+                            14134, Silver Green Street <br> 2nd Avenue, Hemiltone, <br> New York, USA
+                        </p>
+                    </ion-label>
+                </ion-item>
+            </ion-radio-group>
+        </ion-list>
+    </div>
+</ion-content>
+
+<ion-footer class="ion-no-border">
+    <ion-button fill="outline" size="large" shape="block" class="btn" (click)="add_address()">
+         <ion-icon class="zmdi zmdi-plus ion-text-start"></ion-icon>{{'add_new_location' | translate}}
+    </ion-button> 
+    
+    <ion-button size="large" shape="block" class="btn" (click)="confirm_order()">
+        {{'continue' | translate}}
+    </ion-button>
+</ion-footer>

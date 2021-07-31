@@ -1,0 +1,90 @@
+ion-content {
+    --background: rgba(0, 0, 0, 0.34) !important;
+}
+
+.form {
+    background: var(--white);
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    height: fit-content;
+    border-radius: 5px;
+    padding: 18px 18px 15px 18px;
+    width: calc(100% - 80px);
+
+    ion-list {
+        h1 {
+            margin: 0;
+            color: var(--primary);
+            font-size: 1.3rem;
+            padding-bottom: 10px;
+            letter-spacing: .3px;
+        }
+
+        ion-item {
+            padding: 10px 0;
+            border: none !important;
+            margin: 0;
+
+            &::after {
+                display: none;
+            }
+
+            .item_inner {
+                ion-checkbox {
+                    margin: 0;
+                    margin-right: 20px;
+                    min-width: 16px;
+                    --size: 16px;
+                    --background-checked: var(--primary);
+                    --border-color-checked: var(--primary);
+                }
+
+                h2 {
+                    margin: 0;
+                    color: var(--text-black);
+                    font-weight: 600;
+                    letter-spacing: 0;
+                    font-size: 1rem;
+
+                    span {
+                        &.end {
+                            font-size: 0.95rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .btn_container {
+            padding-top: 16px;
+        .btn_grup {
+            display: flex;
+            align-items: center;
+            min-width: fit-content;
+            width: fit-content;
+
+            h2 {
+                margin: 0;
+                color: var(--primary);
+                font-size: .95rem;
+                text-align: center;
+                font-weight: 600;
+                min-width: fit-content;
+                padding: 7px 22px;
+                border-radius: 3px;
+
+                &.done {
+                    color: var(--white);
+                    background: var(--primary);
+                    font-weight: 500;
+                }
+            }
+        }
+
+    }
+}

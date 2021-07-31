@@ -1,0 +1,140 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button text="" icon="arrow-back-outline"></ion-back-button>
+        </ion-buttons>
+        <ion-title>{{"order_no" | translate}} 22145052</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="bg_color" fullscreen>
+    <div class="banner">
+        <div class="order_about">
+            <div class="about_box d-flex">
+                <h2>{{"ordered_by" | translate}}
+                    <strong> Samantha Smith</strong>
+                </h2>
+                <ion-icon class="zmdi zmdi-phone ion-text-center end"></ion-icon>
+            </div>
+            <div class="about_box d-flex status">
+                <h2>
+                    {{"ordered_status" | translate}}
+                    <strong> Ready to Deliver</strong>
+                </h2>
+                <img src="assets/imgs/pickedup.png" class="end">
+            </div>
+        </div>
+
+        <ion-segment (ionChange)="segmentChanged()" [(ngModel)]="segment" lines="none">
+            <ion-segment-button value="0">
+                <ion-label>
+                    {{'order_nfo' | translate}}
+                </ion-label>
+            </ion-segment-button>
+            <ion-segment-button value="1">
+                <ion-label>
+                    {{'cloth_list' | translate}}
+                </ion-label>
+            </ion-segment-button>
+        </ion-segment>
+    </div>
+    <div class="tab_container">
+        <ion-slides #slides (ionSlideDidChange)="slideChanged()">
+            <ion-slide>
+                <div class="order_info">
+                    <div class="info">
+                        <ion-row>
+                            <ion-col size="6">
+                                <h2>{{"picked_up" | translate}}</h2>
+                                <p>21 June, 21:00</p>
+                            </ion-col>
+                            <ion-col size="6">
+                                <h2>{{"delivery" | translate}}</h2>
+                                <p>22 June, 20:00</p>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+
+                    <div class="address info">
+                        <h2>{{"pickeup_info" | translate}}</h2>
+                        <ion-row>
+                            <ion-col size="10">
+                                <p>B11 Old Ford Street, Workshop towerLewisham, Sydney</p>
+                            </ion-col>
+
+                            <ion-col size="2" class="d-flex">
+                                <ion-icon class="zmdi zmdi-navigation ion-text-center end"></ion-icon>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+
+                    <div class="payment_info">
+                        <h2>{{"payment" | translate}}</h2>
+                        <ion-row>
+                            <ion-col size="8">
+                                <h4>$ 78.00</h4>
+                                <h5>Cash on delivery</h5>
+                            </ion-col>
+                            <ion-col size="4">
+                                <ion-button size="large" expand="block" class="btn" fill="outline">{{'view_billing' | translate}}</ion-button>
+                            </ion-col>
+                        </ion-row>
+
+                    </div>
+                </div>
+            </ion-slide>
+
+            <ion-slide>
+                <div class="cloth_list">
+<!--                    <h2>{{"cloth_list" | translate}}</h2>-->
+                    <div class="item_list">
+                        <div class="item">
+                            <h3 class="d-flex">
+                                <span class="quantity">2</span>
+                                <span class="multiply">x</span>
+                                <span class="item_name">Shirts (Man)</span>
+                                <span class="for_this">Wash & Iron</span>
+                                <span class="amount end ion-text-end">$20</span>
+                            </h3>
+                        </div>
+                        <div class="item">
+                            <h3 class="d-flex">
+                                <span class="quantity">3</span>
+                                <span class="multiply">x</span>
+                                <span class="item_name">Trouser (Man)</span>
+                                <span class="for_this">Wash & Iron</span>
+                                <span class="amount end ion-text-end">$25</span>
+                            </h3>
+                        </div>
+                        <div class="item">
+                            <h3 class="d-flex">
+                                <span class="quantity">1</span>
+                                <span class="multiply">x</span>
+                                <span class="item_name">Jeans (Man)</span>
+                                <span class="for_this">Wash & Iron</span>
+                                <span class="amount end ion-text-end">$10</span>
+                            </h3>
+                        </div>
+                        <div class="item">
+                            <h3 class="d-flex">
+                                <span class="quantity">1</span>
+                                <span class="multiply">x</span>
+                                <span class="item_name">T-shirt (Woman)</span>
+                                <span class="for_this">Wash & Iron</span>
+                                <span class="amount end ion-text-end">$25</span>
+                            </h3>
+                        </div>
+                    </div>
+
+                    <div class="total">
+                        <h2 class="d-flex">Cash on Delivery <span class="end">$ 78</span></h2>
+                    </div>
+                </div>
+            </ion-slide>
+        </ion-slides>
+    </div>
+</ion-content>
+
+<ion-footer class="ion-no-border">
+    <ion-button size="large" expand="block" class="btn">{{'mark_delivered' | translate}}</ion-button>
+</ion-footer>

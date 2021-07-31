@@ -1,0 +1,80 @@
+<ion-header>
+	<ion-toolbar>
+		<ion-buttons slot="start">
+			<ion-back-button text="" icon="chevron-back-outline"></ion-back-button>
+		</ion-buttons>
+		<ion-title>{{'edit_item' | translate}}</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content class="bg_color">
+	<div class="banner">
+		<h2 class="d-flex">{{'item_phtos' | translate}} <span class="end">{{'add_upto_8_photos' | translate}}</span></h2>
+		<div class="scroll_container">
+			<div class="img-box img_box">
+				<img src="assets/imgs/item_img_1.png" class="center_img">
+			</div>
+			<div class="img-box icon-box">
+				<ion-icon class="zmdi zmdi-camera"></ion-icon>
+			</div>
+		</div>
+	</div>
+
+	<ion-list lines="none">
+		<div class="form">
+			<h2>{{'select_categorie_sub_category' | translate}}</h2>
+			<ion-item lines="none">
+				<ion-select [(ngModel)]="categorie">
+					<ion-select-option value="apparels">Vegetables & Fruits</ion-select-option>
+					<ion-select-option value="n64">Fresh Vegetables</ion-select-option>
+				</ion-select>
+			</ion-item>
+			<ion-item lines="none">
+				<ion-select [(ngModel)]="sub_category">
+					<ion-select-option value="n64">Vegetables & Fruits</ion-select-option>
+					<ion-select-option value="men_wear">Fresh Vegetables</ion-select-option>
+				</ion-select>
+			</ion-item>
+		</div>
+
+		<div class="form">
+			<h2 class="d-flex">{{'item_title' | translate}}</h2>
+			<ion-item lines="none">
+				<ion-input type="text" value="Fresh Onion - Medium "></ion-input>
+			</ion-item>
+			<h2 class="d-flex " style="padding-top: 10px;">{{'item_description' | translate}}</h2>
+			<ion-item lines="none">
+				<ion-textarea rows="5" type="text" value="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."></ion-textarea>
+			</ion-item>
+		</div>
+
+		<div class="form">
+			<h2 class="d-flex">{{'product_pricing' | translate}}</h2>
+			<ion-row>
+				<ion-col size="6">
+					<ion-item lines="none">
+						<ion-input type="text" value="Ragular Price"></ion-input>
+					</ion-item>
+				</ion-col>
+				<ion-col size="6">
+					<ion-item lines="none">
+						<ion-input type="text" value="Sale Price"></ion-input>
+					</ion-item>
+				</ion-col>
+			</ion-row>
+		</div>
+
+		<div class="form">
+			<h2>{{'item_in_stock' | translate}}</h2>
+			<ion-item lines="none">
+				<ion-select [(ngModel)]="in_stock">
+					<ion-select-option value="1">In Stock</ion-select-option>
+					<ion-select-option value="2">In Shop</ion-select-option>
+				</ion-select>
+			</ion-item>
+		</div>
+	</ion-list>
+</ion-content>
+<ion-footer class="ion-no-border">
+	<ion-button size="large" expand="full" class="btn">{{'update_item_info' | translate}}</ion-button>
+</ion-footer>
